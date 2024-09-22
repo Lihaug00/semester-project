@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Roboto, serif;
+  }
+  
+  header {
+    background-color: #4a4a4a;
+    padding: 0;
+  }
+
+  .header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    flex: 0 1 auto;
+  }
+  
+  .logo img {
+    width: 250px;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    padding: 0.5rem;
+    width: 250px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  
+  nav ul li a:hover::after {
+    opacity: 1;
+  }
+  
+  .search-bar input {
+    padding-left: 35px;
+    background: url('https://icons.veryicon.com/png/o/miscellaneous/designer-icon-1/searchbar.png') no-repeat 10px center;
+    background-size: 20px 20px;
+    background-color: #ffffff;
+  }
+  
+  .hero {
+    position: relative;
+    height: 80vh;
+  }
+  
+  .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #339285;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .hero .btn {
+    background-color: #000000;
+    color: #339285;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .btn:hover {
+    background-color: #252525;
+  }
+  
+.content-wrapper {
+    background-color: #4a4a4a;
+    padding: 2rem 0;
+  }
+  
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+  }
+  
+  .content-block {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .content-img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .content-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .content-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .content-block:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 768px) {
+    .content-block {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .content-img {
+      width: 100%;
+    }
+  }
+  
+.content-wrapper {
+    background-color: #4a4a4a;
+    padding: 2rem 0 0 0;
+  }
+  
+  .kids-section {
+    background-color: #4a4a4a;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .kids-section h2 {
+    font-size: 2.5rem;
+    color: #339285;
+    margin-bottom: 1rem;
+  }
+  
+  .kids-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+  
+.content-wrapper {
+    background-color: #4a4a4a;
+    padding: 2rem 0;
+  }
+  
+  .kids-section {
+    background-color: #4a4a4a;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .kids-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .kids-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+  
+  .kids-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .kids-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .kids-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .kids-card p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .kids-card .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .kids-card .btn:hover {
+    background-color: #252525;
+  }
+
+  .teachers-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+  .teachers-section {
+    background-color: #4a4a4a;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .teachers-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .teachers-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .teachers-card p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .teachers-card .btn {
+    background-color: #030303;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .teachers-card .btn:hover {
+    background-color: #252525;
+  }
+
+  .researchers-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+
+.researchers-section {
+    background-color: #4a4a4a;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .researchers-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .researchers-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .researchers-card p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .researchers-card .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .researchers-card .btn:hover {
+    background-color: #252525;
+  }
+
+.teachers-section {
+    background: url('Pictures/mavis-cw-164128.jpg') no-repeat center center/cover;
+    padding: 4rem 2rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .researchers-section {
+    background: url('Pictures/mavis-cw-164128.jpg') no-repeat center center/cover;
+    padding: 4rem 2rem;
+    color: #fff !important;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .teachers-section::before,
+  .researchers-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .teachers-section h3,
+  .teachers-section .teachers-grid,
+  .researchers-section h3,
+  .researchers-section .researchers-card {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+  
+  .teachers-card, .researchers-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  .teachers-card p, .researchers-card p {
+    color: #fff;
+  }
+  
+  .teachers-card .btn, .researchers-card .btn {
+    background-color: #000000;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .teachers-card .btn:hover, .researchers-card .btn:hover {
+    background-color: #252525;
+  }
+  
+.footer {
+    background-color: #f4f4f4;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    height: 250px;
+  }
+  
+  .footer-logo {
+    flex: 0 0 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100%;
+  }
+  
+  .footer-logo img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    gap: 1rem;
+  }
+  
+  .footer-column {
+    flex: 1;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .footer-column p {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-column a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 1024px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+    }
+  
+    .footer-logo {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .footer-logo img {
+      width: 150px;
+      height: auto;
+    }
+  
+    .footer-columns {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 2rem;
+    }
+  
+    .footer-column {
+      text-align: center;
+      margin-bottom: 1rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  .footer-logo-left,
+  .footer-logo-right {
+    flex: 0 0 250px;
+    height: 100%;
+    background-color: #f4f4f4;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .kids-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
